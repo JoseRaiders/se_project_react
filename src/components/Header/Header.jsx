@@ -3,6 +3,11 @@ import logo from "../../assets/Logo.svg";
 import avatar from "../../assets/Avatar.jpg";
 
 function Header() {
+  const currentDate = new Date().toLocaleString("default", {
+    month: "long",
+    day: "numeric",
+  });
+
   return (
     <>
       <header className="header">
@@ -11,7 +16,7 @@ function Header() {
           src={logo}
           alt="wtwr (What to Wear) logo"
         />
-        <p className="header__date-and-location">December 10, New York</p>
+        <p className="header__date-and-location">{currentDate}, New York</p>
         <button className="header__add-clothes-btn">+ Add clothes</button>
         <div className="header__user-container">
           <p className="header__user">Terrence Tegegne</p>
@@ -23,10 +28,3 @@ function Header() {
 }
 
 export default Header;
-
-// logo
-// date
-// location
-// add clothes
-// user
-// avatar
