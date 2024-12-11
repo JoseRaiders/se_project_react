@@ -1,23 +1,7 @@
-.cards__text {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
-  margin: 0;
-  padding-top: 40px;
-  padding-bottom: 14px;
-}
-
-.cards__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
 .card {
   position: relative;
+  display: flex;
+  justify-content: center;
   width: 323px;
   border-radius: 4px;
   margin: 0;
@@ -27,7 +11,6 @@
 .card__name {
   position: absolute;
   top: 15px;
-  left: 125px;
   background-color: #fff;
   color: rgba(0, 0, 0, 0.6);
   font-size: 16px;
