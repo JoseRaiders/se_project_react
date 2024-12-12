@@ -1,16 +1,7 @@
 @import url(./vendor/normalize.css);
 @font-face {
   font-family: "Cabinet Grotesk";
-  src: url("../src/vendor/fonts/CabinetGrotesk-Regular.otf")
-    format("OpenType Font");
-}
-@font-face {
-  font-family: "Cabinet Grotesk";
-  src: url("../src/vendor/fonts/CabinetGrotesk-Medium.otf")
-    format("OpenType Font");
-}
-@font-face {
-  font-family: "Cabinet Grotesk";
-  src: url("../src/vendor/fonts/CabinetGrotesk-Bold.otf")
-    format("OpenType Font");
+  src: url("../src/vendor/fonts/CabinetGrotesk-Regular.otf") format("opentype"),
+    url("../src/vendor/fonts/CabinetGrotesk-Medium.otf") format("opentype"),
+    url("../src/vendor/fonts/CabinetGrotesk-Bold.otf") format("opentype");
 }

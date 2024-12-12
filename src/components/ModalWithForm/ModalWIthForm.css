@@ -13,7 +13,8 @@
 
 .modal__container {
   position: relative;
-  width: 496px;
+  max-width: 496px;
+  width: 100%;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 20px;
@@ -56,6 +57,10 @@
   margin: 0;
 }
 
+.modal__label-input:nth-child(2) {
+  padding-top: 24px;
+}
+
 .modal__input {
   display: block;
   width: 100%;
@@ -65,7 +70,7 @@
   color: rgba(0, 0, 0, 0.5);
   border: none;
   border-bottom: 1px solid #000;
-  padding: 0;
+  padding: 8px 0 0;
 }
 
 .modal__radio-buttons {
@@ -99,13 +104,13 @@
 } */
 
 .modal__submit {
-  width: 124px;
+  max-width: 124px;
   height: 36px;
   background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
   font-size: 16px;
   line-height: 20px;
-  font-weight: 700;
+  font-weight: normal;
   text-align: left;
   border: none;
   border-radius: 4px;
