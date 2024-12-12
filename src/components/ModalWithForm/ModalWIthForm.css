@@ -104,10 +104,9 @@
 .modal__radio-input {
   width: 16px;
   height: 16px;
-  background-color: #000;
-  background-image: url(../..assets/radio_button.svg);
   border: 1px solid rgba(0, 0, 0, 0.5);
   margin-right: 8px;
+  cursor: pointer;
 }
 
 .modal__submit {
