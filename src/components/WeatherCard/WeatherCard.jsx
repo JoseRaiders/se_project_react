@@ -10,11 +10,11 @@ import rain_night from "../../assets/rain_n.jpg";
 import fog_day from "../../assets/fog_d.jpg";
 import fog_night from "../../assets/fog_n.jpg";
 
-function WeatherCard() {
+function WeatherCard({ weatherData }) {
   return (
     <>
       <section className="weather__card">
-        <p className="weather__card-temp">75&deg;F</p>
+        <p className="weather__card-temp">{weatherData.roundedTemp}&deg;F</p>
         <img src={cloudy_day} alt="Cloudy Day" className="weather__card-img" />
       </section>
     </>

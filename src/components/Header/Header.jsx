@@ -2,7 +2,7 @@ import "./Header.css";
 import logo from "../../assets/Logo.svg";
 import avatar from "../../assets/Avatar.jpg";
 
-function Header({ addButtonClick }) {
+function Header({ addButtonClick, weatherData }) {
   const currentDate = new Date().toLocaleString("default", {
     month: "long",
     day: "numeric",
@@ -16,7 +16,9 @@ function Header({ addButtonClick }) {
           src={logo}
           alt="wtwr (What to Wear) logo"
         />
-        <p className="header__date-and-location">{currentDate}, New York</p>
+        <p className="header__date-and-location">
+          {currentDate}, {weatherData.city}
+        </p>
         <button
           type="button"
           className="header__add-clothes-btn"
