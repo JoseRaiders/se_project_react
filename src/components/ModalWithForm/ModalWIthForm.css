@@ -1,5 +1,5 @@
 .modal {
-  /* visibility: hidden; */
+  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -9,6 +9,13 @@
   background-color: rgba(0, 0, 0, 0.3);
   justify-content: center;
   align-items: center;
+}
+
+.modal_opened {
+  visibility: visible;
+  transition: visibility 0.3s linear 0s, opacity 0.3s linear;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal__container {
@@ -73,6 +80,11 @@
   padding: 8px 0 0;
 }
 
+.modal__label_type_radio {
+  display: flex;
+  align-items: center;
+}
+
 .modal__radio-buttons {
   display: flex;
   flex-direction: column;
@@ -92,16 +104,11 @@
 .modal__radio-input {
   width: 16px;
   height: 16px;
+  background-color: #000;
+  background-image: url(../..assets/radio_button.svg);
   border: 1px solid rgba(0, 0, 0, 0.5);
   margin-right: 8px;
 }
-
-/* .modal_opened {
-  visibility: visible;
-  transition: visibility 0s linear 0s, opacity 0.3s linear;
-  opacity: 1;
-  pointer-events: auto;
-} */
 
 .modal__submit {
   max-width: 124px;
