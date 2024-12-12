@@ -1,0 +1,29 @@
+.modal__container_type_image {
+  position: relative;
+  max-width: 498px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.modal__close-preview {
+  background-image: url(../../assets/preview_close.svg);
+}
+
+.modal__image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.modal__details {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+  padding: 20px 0 32px 32px;
+}
