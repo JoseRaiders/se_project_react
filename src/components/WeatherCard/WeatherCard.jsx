@@ -1,21 +1,30 @@
 import "./WeatherCard.css";
-import sunny_day from "../../assets/sunny_d.jpg";
-import sunny_night from "../../assets/sunny_n.jpg";
-import cloudy_day from "../../assets/cloudy_d.jpg";
-import cloudy_night from "../../assets/cloudy_n.jpg";
-import storm_day from "../../assets/storm_d.jpg";
-import storm_night from "../../assets/storm_n.jpg";
-import rain_day from "../../assets/rain_d.jpg";
-import rain_night from "../../assets/rain_n.jpg";
-import fog_day from "../../assets/fog_d.jpg";
-import fog_night from "../../assets/fog_n.jpg";
+import { weatherOptions, defaultWeatherOptions } from "../../utils/constants";
 
 function WeatherCard({ weatherData }) {
+  const filteredOptions = weatherOptions.filter((option) => {
+    return (
+      option.day === weatherData.isDay &&
+      option.condition === weatherData.condition
+    );
+  });
+
+  let weatherOption;
+  if (filteredOptions.length === 0) {
+    weatherOption = defaultWeatherOptions[weatherData.isDay ? "day" : "night"];
+  } else {
+    weatherOption = filteredOptions[0];
+  }
+
   return (
     <>
       <section className="weather__card">
-        <p className="weather__card-temp">{weatherData.roundedTemp}&deg;F</p>
-        <img src={cloudy_day} alt="Cloudy Day" className="weather__card-img" />
+        <p className="weather__card-temp">{weatherData.temp.F}&deg;F</p>
+        <img
+          src={weatherOption?.url}
+          alt={`Weather card shows ${weatherOption?.condition || "default"}`}
+          className="weather__card-img"
+        />
       </section>
     </>
   );

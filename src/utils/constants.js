@@ -1,3 +1,75 @@
+export const weatherOptions = [
+  {
+    day: true,
+    condition: "clear",
+    url: new URL("../assets/day/clear_d.jpg", import.meta.url).href,
+  },
+  {
+    day: true,
+    condition: "clouds",
+    url: new URL("../assets/day/clouds_d.jpg", import.meta.url).href,
+  },
+  {
+    day: true,
+    condition: "rain",
+    url: new URL("../assets/day/rain_d.jpg", import.meta.url).href,
+  },
+  {
+    day: true,
+    condition: "thunderstorm",
+    url: new URL("../assets/day/thunderstorm_d.jpg", import.meta.url).href,
+  },
+  {
+    day: true,
+    condition: "snow",
+    url: new URL("../assets/day/snow_d.jpg", import.meta.url).href,
+  },
+  {
+    day: true,
+    condition: "fog",
+    url: new URL("../assets/day/fog_d.jpg", import.meta.url).href,
+  },
+  {
+    day: false,
+    condition: "clear",
+    url: new URL("../assets/night/clear_n.jpg", import.meta.url).href,
+  },
+  {
+    day: false,
+    condition: "clouds",
+    url: new URL("../assets/night/clouds_n.jpg", import.meta.url).href,
+  },
+  {
+    day: false,
+    condition: "rain",
+    url: new URL("../assets/night/rain_n.jpg", import.meta.url).href,
+  },
+  {
+    day: false,
+    condition: "thunderstorm",
+    url: new URL("../assets/night/thunderstorm_n.jpg", import.meta.url).href,
+  },
+  {
+    day: false,
+    condition: "snow",
+    url: new URL("../assets/night/snow_n.jpg", import.meta.url).href,
+  },
+  {
+    day: false,
+    condition: "fog",
+    url: new URL("../assets/night/fog_n.jpg", import.meta.url).href,
+  },
+];
+
+export const defaultWeatherOptions = {
+  day: {
+    url: new URL("../assets/day/default_d.jpg", import.meta.url).href,
+  },
+  night: {
+    url: new URL("../assets/night/default_n.jpg", import.meta.url).href,
+  },
+};
+
 export const defaultClothingItems = [
   {
     _id: 0,
@@ -38,8 +110,12 @@ export const defaultClothingItems = [
 ];
 
 export const coordinates = {
-  latitude: 33.994507560848305,
-  longitude: -118.48198172861845,
+  latitude: 33.994507560848305, // santa monica, us
+  longitude: -118.48198172861845, // santa monica, us
+  // latitude: 14.595475420332555, // manila
+  // longitude: 121.00407707303364, // manila
+  // latitude: 1.2803576090818536, // singapore
+  // longitude: 103.83461472251084, // singapore
 };
 
 export const APIKey = "a6dd791813aee4513aac1abadd773df5";
