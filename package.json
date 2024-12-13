@@ -1,9 +1,9 @@
 {
-  "name": "wtwr_project",
+  "name": "se_project_react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://joseraiders.github.io/se_wtwr_react",
+  "homepage": "https://joseraiders.github.io/se_project_react",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
