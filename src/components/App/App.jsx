@@ -74,42 +74,48 @@ function App() {
           </label>
           <fieldset className="modal__radio-buttons">
             <legend className="modal__legend">Select the weather type:</legend>
-            <input
-              type="radio"
-              className="modal__radio-input"
-              id="hot"
-              name="temperature"
-            />
-            <label
-              htmlFor="hot"
-              className="modal__label modal__label_type_radio"
-            >
-              Hot
-            </label>
-            <input
-              type="radio"
-              className="modal__radio-input"
-              id="warm"
-              name="temperature"
-            />
-            <label
-              htmlFor="warm"
-              className="modal__label modal__label_type_radio"
-            >
-              Warm
-            </label>
-            <input
-              type="radio"
-              className="modal__radio-input"
-              id="cold"
-              name="temperature"
-            />
-            <label
-              htmlFor="cold"
-              className="modal__label modal__label_type_radio"
-            >
-              Cold
-            </label>
+            <div className="modal__radio-button">
+              <input
+                type="radio"
+                className="modal__radio-input"
+                id="hot"
+                name="options"
+              />
+              <label
+                htmlFor="hot"
+                className="modal__label modal__label_type_radio"
+              >
+                Hot
+              </label>
+            </div>
+            <div className="modal__radio-button">
+              <input
+                type="radio"
+                className="modal__radio-input"
+                id="warm"
+                name="options"
+              />
+              <label
+                htmlFor="warm"
+                className="modal__label modal__label_type_radio"
+              >
+                Warm
+              </label>
+            </div>
+            <div className="modal__radio-button">
+              <input
+                type="radio"
+                className="modal__radio-input"
+                id="cold"
+                name="options"
+              />
+              <label
+                htmlFor="cold"
+                className="modal__label modal__label_type_radio"
+              >
+                Cold
+              </label>
+            </div>
           </fieldset>
         </ModalWithForm>
         <ItemModal
