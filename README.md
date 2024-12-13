@@ -12,9 +12,9 @@ The WTWR (What to Wear) app is a web application that leverages real-time weathe
 
 ## Application screenshots
 
-![WTWR application](wtwr_application.png)
-![Add garment form](add_garment_form.png)
-![Clothing card preview](clothing_card_preview.png)
+![WTWR application](wtwr_application-1.png)
+![Add garment form](add_garment_form-1.png)
+![Clothing card preview](clothing_card_preview-1.png)
 
 ## Technologies used
 
