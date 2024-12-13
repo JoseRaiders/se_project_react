@@ -17,18 +17,16 @@ function WeatherCard({ weatherData }) {
   }
 
   return (
-    <>
-      <section className="weather__card">
-        <p className="weather__card-temp">
-          {Math.round(weatherData.temp.F)}&deg;F
-        </p>
-        <img
-          src={weatherOption?.url}
-          alt={`Weather card shows ${weatherOption?.condition || "default"}`}
-          className="weather__card-img"
-        />
-      </section>
-    </>
+    <section className="weather__card">
+      <p className="weather__card-temp">
+        {Math.round(weatherData.temp.F)}&deg;F
+      </p>
+      <img
+        src={weatherOption?.url}
+        alt={`Weather card shows ${weatherOption?.condition || "default"}`}
+        className="weather__card-img"
+      />
+    </section>
   );
 }
 

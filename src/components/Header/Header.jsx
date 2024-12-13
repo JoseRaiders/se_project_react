@@ -9,29 +9,23 @@ function Header({ addButtonClick, weatherData }) {
   });
 
   return (
-    <>
-      <header className="header">
-        <img
-          className="header__logo"
-          src={logo}
-          alt="wtwr (What to Wear) logo"
-        />
-        <p className="header__date-and-location">
-          {currentDate}, {weatherData.city}
-        </p>
-        <button
-          type="button"
-          className="header__add-clothes-btn"
-          onClick={addButtonClick}
-        >
-          + Add clothes
-        </button>
-        <div className="header__user-container">
-          <p className="header__user">Terrence Tegegne</p>
-          <img className="header__avatar" src={avatar} alt="Avatar" />
-        </div>
-      </header>
-    </>
+    <header className="header">
+      <img className="header__logo" src={logo} alt="wtwr (What to Wear) logo" />
+      <p className="header__date-and-location">
+        {currentDate}, {weatherData.city}
+      </p>
+      <button
+        type="button"
+        className="header__add-clothes-btn"
+        onClick={addButtonClick}
+      >
+        + Add clothes
+      </button>
+      <div className="header__user-container">
+        <p className="header__user">Terrence Tegegne</p>
+        <img className="header__avatar" src={avatar} alt="Avatar" />
+      </div>
+    </header>
   );
 }
 

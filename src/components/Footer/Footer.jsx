@@ -6,12 +6,10 @@ function Footer() {
   });
 
   return (
-    <>
-      <footer className="footer">
-        <p className="footer__copyright">Developed by Anuska Jose</p>
-        <p className="footer__year">{currentYear}</p>
-      </footer>
-    </>
+    <footer className="footer">
+      <p className="footer__copyright">Developed by Anuska Jose</p>
+      <p className="footer__year">{currentYear}</p>
+    </footer>
   );
 }
 
