@@ -10,6 +10,12 @@ The WTWR (What to Wear) app is a web application that leverages real-time weathe
 - Add clothing: Tailor your wardrobe for clothing recommendations based on weather forecast
 - Weather forecast display: View the current weather forecast for informed decision-making
 
+## Application screenshots
+
+![WTWR application](wtwr_application.png)
+![Add garment form](add_garment_form.png)
+![Clothing card preview](clothing_card_preview.png)
+
 ## Technologies used
 
 - React: Developed the front-end interface
@@ -21,4 +27,4 @@ The WTWR (What to Wear) app is a web application that leverages real-time weathe
 ### Links
 
 - [Figma Design](https://www.figma.com/file/DTojSwldenF9UPKQZd6RRb/Sprint-10%3A-WTWR)
-- [Project live Site](https://joseraiders.github.io/wtwr_project/)
+- [Project live Site](https://joseraiders.github.io/se_wtwr_react/)
