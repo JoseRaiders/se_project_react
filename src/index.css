@@ -1,7 +1,2 @@
-@import url(./vendor/normalize.css);
-@font-face {
-  font-family: "Cabinet Grotesk";
-  src: url("../src/vendor/fonts/CabinetGrotesk-Regular.otf") format("opentype"),
-    url("../src/vendor/fonts/CabinetGrotesk-Medium.otf") format("opentype"),
-    url("../src/vendor/fonts/CabinetGrotesk-Bold.otf") format("opentype");
-}
+@import url("./vendor/normalize.css");
+@import url("./vendor/fonts.css");
