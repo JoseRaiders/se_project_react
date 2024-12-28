@@ -1,0 +1,18 @@
+.toggle {
+  margin-left: auto;
+  padding: 0 20px 0 0;
+}
+
+.toggle__switch {
+  display: flex;
+  position: relative;
+}
+
+.toggle__switch-box {
+  width: 56px;
+  height: 28px;
+  background-color: #fff;
+  border: 2px solid #7e7e7e;
+  border-radius: 20px;
+  appearance: none;
+}
