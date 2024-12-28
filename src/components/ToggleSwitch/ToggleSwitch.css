@@ -29,12 +29,12 @@
 }
 
 .toggle__switch-slider-F {
-  transition: all 6s ease-in 2s;
+  transition: all 5s ease-in-out 2s;
 }
 
 .toggle__switch-slider-C {
   left: 28px;
-  transition: all 6s ease-in 2s;
+  transition: all 5s ease-in-out 2s;
 }
 
 .toggle__temp-F {

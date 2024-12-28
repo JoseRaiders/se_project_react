@@ -1,13 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./ToggleSwitch.css";
+import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperatureUnitContext";
 
 function ToggleSwitch() {
-  const [currentTempUnit, setCurrentTempUnit] = useState("F");
+  // const [currentTemperatureUnit, setcurrentTemperatureUnit] = useState("F");
 
-  const handleChange = () => {
-    setCurrentTempUnit(currentTempUnit === "F" ? "C" : "F");
-  };
-  // console.log(currentTempUnit);
+  // const handleChange = () => {
+  //   setcurrentTemperatureUnit(currentTemperatureUnit === "F" ? "C" : "F");
+  // };
+
+  const { currentTemperatureUnit, handleToggleSwitchChange } = useContext(
+    CurrentTemperatureUnitContext
+  );
+
+  function handleChange() {
+    handleToggleSwitchChange();
+  }
+
   return (
     <div className="toggle">
       <label className="toggle__switch" htmlFor="toggle">
@@ -21,21 +30,21 @@ function ToggleSwitch() {
         />
         <span
           className={
-            currentTempUnit === "F"
+            currentTemperatureUnit === "F"
               ? "toggle__switch-slider toggle__switch-slider-F"
               : "toggle__switch-slider toggle__switch-slider-C"
           }
         ></span>
         <p
           className={`toggle__temp-F ${
-            currentTempUnit === "F" ? "toggle__switch-active-F" : ""
+            currentTemperatureUnit === "F" && "toggle__switch-active-F"
           }`}
         >
           F
         </p>
         <p
           className={`toggle__temp-C ${
-            currentTempUnit === "C" ? "toggle__switch-active-C" : ""
+            currentTemperatureUnit === "C" && "toggle__switch-active-C"
           }`}
         >
           C
