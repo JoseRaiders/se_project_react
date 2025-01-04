@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "./Header.css";
 import logo from "../../assets/Logo.svg";
 import avatar from "../../assets/Avatar.png";
@@ -11,7 +13,13 @@ function Header({ addButtonClick, weatherData }) {
 
   return (
     <header className="header">
-      <img className="header__logo" src={logo} alt="wtwr (What to Wear) logo" />
+      <Link to="/">
+        <img
+          className="header__logo"
+          src={logo}
+          alt="wtwr (What to Wear) logo"
+        />
+      </Link>
       <p className="header__date-and-location">
         {currentDate}, {weatherData.city}
       </p>
