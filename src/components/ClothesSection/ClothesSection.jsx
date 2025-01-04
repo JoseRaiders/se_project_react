@@ -2,7 +2,7 @@ import "./ClothesSection.css";
 import { defaultClothingItems } from "../../utils/constants";
 import ItemCard from "../ItemCard/ItemCard";
 
-function ClothesSection({ addButtonClick }) {
+function ClothesSection({ addButtonClick, handleCardClick }) {
   return (
     <div className="clothes">
       <div className="clothes__section">
@@ -21,7 +21,7 @@ function ClothesSection({ addButtonClick }) {
             <ItemCard
               key={item._id}
               item={item}
-              // onCardClick={handleCardClick}
+              onCardClick={handleCardClick}
             />
           );
         })}
