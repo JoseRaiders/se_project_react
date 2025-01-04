@@ -15,7 +15,7 @@ function ClothesSection({ addButtonClick }) {
           + Add new
         </button>
       </div>
-      <ul className="cards__list">
+      <ul className="clothes__section-list">
         {defaultClothingItems.map((item) => {
           return (
             <ItemCard
