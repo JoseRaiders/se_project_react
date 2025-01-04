@@ -5,8 +5,12 @@ import ClothesSection from "../ClothesSection/ClothesSection";
 function Profile({ addButtonClick }) {
   return (
     <div className="profile">
-      <SideBar />
-      <ClothesSection addButtonClick={addButtonClick} />
+      <section className="profile__sidebar">
+        <SideBar />
+      </section>
+      <section className="profile__clothes-section">
+        <ClothesSection addButtonClick={addButtonClick} />
+      </section>
     </div>
   );
 }
