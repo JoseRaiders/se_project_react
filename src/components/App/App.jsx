@@ -123,7 +123,7 @@ function App() {
           isOpen={activeModal === "preview"}
           card={selectCard}
           onClose={closeModal}
-          onDelete={handleDeleteItem}
+          onClick={handleDeleteItem}
         />
       </CurrentTemperatureUnitContext.Provider>
     </div>

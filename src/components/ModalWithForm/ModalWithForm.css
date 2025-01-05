@@ -20,15 +20,15 @@
 
 .modal__container {
   position: relative;
+}
+
+.modal__container_clothes {
   max-width: 496px;
   width: 100%;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   box-sizing: border-box;
-}
-
-.modal__container_clothes {
   padding: 28px 28px 36px;
 }
 
