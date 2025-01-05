@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./AddItemModal.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
@@ -28,6 +28,15 @@ function AddItemModal({ isOpen, onAddItem, onClose }) {
     });
   };
 
+  // reset to an empty strings
+  useEffect(() => {
+    if (isOpen) {
+      setName("");
+      setImageUrl("");
+      setWeather("");
+    }
+  }, [isOpen]);
+
   return (
     <ModalWithForm
       title="New garment"
@@ -44,6 +53,7 @@ function AddItemModal({ isOpen, onAddItem, onClose }) {
           className="modal__input"
           id="name"
           placeholder="Name"
+          aria-label="Name"
           minLength="1"
           maxLength="50"
           value={name}
@@ -57,6 +67,7 @@ function AddItemModal({ isOpen, onAddItem, onClose }) {
           className="modal__input"
           id="imageUrl"
           placeholder="Image URL"
+          aria-label="Image URL"
           value={imageUrl}
           onChange={handleImageUrlChange}
         />
@@ -68,7 +79,9 @@ function AddItemModal({ isOpen, onAddItem, onClose }) {
             type="radio"
             className="modal__radio-input"
             id="hot"
+            value="Hot"
             name="options"
+            checked={weather === "Hot"} // bind to weather state to reset radio button
             onChange={handleWeatherChange}
           />
           <label htmlFor="hot" className="modal__label modal__label_type_radio">
@@ -80,7 +93,9 @@ function AddItemModal({ isOpen, onAddItem, onClose }) {
             type="radio"
             className="modal__radio-input"
             id="warm"
+            value="Warm"
             name="options"
+            checked={weather === "Warm"}
             onChange={handleWeatherChange}
           />
           <label
@@ -95,7 +110,9 @@ function AddItemModal({ isOpen, onAddItem, onClose }) {
             type="radio"
             className="modal__radio-input"
             id="cold"
+            value="Cold"
             name="options"
+            checked={weather === "Cold"}
             onChange={handleWeatherChange}
           />
           <label
