@@ -18,7 +18,7 @@ function ItemModal({ isOpen, onClose, card }) {
           <button
             onClick={onClose}
             type="button"
-            className="modal__close modal__close-delete"
+            className="modal__delete-btn"
             id="clothes-delete-button"
             aria-label="Delete button"
           >
