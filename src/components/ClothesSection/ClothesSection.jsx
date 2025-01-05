@@ -1,8 +1,23 @@
+import { useState, useEffect } from "react";
+import { getItems } from "../../utils/api";
+
 import "./ClothesSection.css";
-import { defaultClothingItems } from "../../utils/constants";
+// import { defaultClothingItems } from "../../utils/constants";
 import ItemCard from "../ItemCard/ItemCard";
 
 function ClothesSection({ addButtonClick, handleCardClick }) {
+  const [clothingItems, setClothingItems] = useState([]);
+
+  useEffect(() => {
+    getItems()
+      .then((data) => {
+        setClothingItems(data);
+      })
+      .catch((err) => {
+        console.error("Error fetching clothing items:", err);
+      });
+  }, []);
+
   return (
     <div className="clothes">
       <div className="clothes__section">
@@ -16,7 +31,7 @@ function ClothesSection({ addButtonClick, handleCardClick }) {
         </button>
       </div>
       <ul className="clothes__section-list">
-        {defaultClothingItems.map((item) => {
+        {clothingItems.map((item) => {
           return (
             <ItemCard
               key={item._id}

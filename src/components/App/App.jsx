@@ -12,7 +12,7 @@ import Footer from "../Footer/Footer";
 
 import { coordinates, APIKey } from "../../utils/constants";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
-// import { addItem } from "../../utils/api";
+import { getItems, addItem, deleteItem } from "../../utils/api";
 
 function App() {
   const [weatherData, setWeatherData] = useState({
@@ -23,7 +23,7 @@ function App() {
   const [activeModal, setActiveModal] = useState("");
   const [selectCard, setSelectedCard] = useState({});
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
-  // const [clothingItems, setClothingItems] = useState([]);
+  const [clothingItems, setClothingItems] = useState([]);
 
   const addButtonClick = () => {
     setActiveModal("add-garment");
@@ -31,17 +31,6 @@ function App() {
 
   const closeModal = () => {
     setActiveModal("");
-  };
-
-  const onAddItem = (values) => {
-    console.log(values);
-    // return addItem(item) // calls the API method to add the item
-    //   .then((newItem) => {
-    //     // updates state with the new item
-    //     setClothingItems((clothingItems) => [newItem.data, ...clothingItems]);
-    //     closeModal();
-    //   })
-    //   .catch(console.error);
   };
 
   const handleCardClick = (card) => {
@@ -55,12 +44,41 @@ function App() {
       : setCurrentTemperatureUnit("F");
   };
 
+  const onAddItem = (item) => {
+    // console.log(values);
+    return addItem(item) // calls the API method to add the item
+      .then((newItem) => {
+        // updates state with the new item
+        setClothingItems((clothingItems) => [newItem, ...clothingItems]);
+        closeModal();
+      })
+      .catch(console.error);
+  };
+
+  const handleDeleteItem = (id) => {
+    return deleteItem(id)
+      .then(() => {
+        setClothingItems((clothingItems) =>
+          clothingItems.filter((item) => item._id !== id)
+        );
+      })
+      .catch(console.error);
+  };
+
   useEffect(() => {
     getWeather(coordinates, APIKey)
       .then((data) => {
         const filterData = filterWeatherData(data);
         setWeatherData(filterData);
         // debugger;
+      })
+      .catch(console.error);
+  }, []);
+
+  useEffect(() => {
+    getItems()
+      .then((data) => {
+        setClothingItems(data);
       })
       .catch(console.error);
   }, []);
@@ -79,6 +97,7 @@ function App() {
                 <Main
                   weatherData={weatherData}
                   handleCardClick={handleCardClick}
+                  clothingItems={clothingItems}
                 />
               }
             />
@@ -88,6 +107,7 @@ function App() {
                 <Profile
                   addButtonClick={addButtonClick}
                   handleCardClick={handleCardClick}
+                  clothingItems={clothingItems}
                 />
               }
             />
@@ -103,6 +123,7 @@ function App() {
           isOpen={activeModal === "preview"}
           card={selectCard}
           onClose={closeModal}
+          onDelete={handleDeleteItem}
         />
       </CurrentTemperatureUnitContext.Provider>
     </div>
