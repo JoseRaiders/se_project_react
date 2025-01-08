@@ -112,12 +112,12 @@ export const defaultClothingItems = [
 export const coordinates = {
   // latitude: 33.994507560848305, // santa monica, us
   // longitude: -118.48198172861845, // santa monica, us
-  latitude: 14.595475420332555, // manila
-  longitude: 121.00407707303364, // manila
+  // latitude: 14.595475420332555, // manila
+  // longitude: 121.00407707303364, // manila
   // latitude: 1.2803576090818536, // singapore
   // longitude: 103.83461472251084, // singapore
-  // latitude: 51.52706074040512, // london
-  // longitude: 0.030283721191152375, // london
+  latitude: 51.52706074040512, // london
+  longitude: 0.030283721191152375, // london
 };
 
 export const APIKey = "a6dd791813aee4513aac1abadd773df5";

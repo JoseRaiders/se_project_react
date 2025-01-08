@@ -77,6 +77,10 @@
   justify-content: center;
 }
 
+.modal__close-confirmation {
+  background-image: url(../../assets/desktop_close.svg);
+}
+
 .modal__confirm-heading {
   max-width: 367px;
   text-align: center;

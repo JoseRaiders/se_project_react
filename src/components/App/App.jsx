@@ -45,10 +45,10 @@ function App() {
   };
 
   const onAddItem = (item) => {
-    // console.log(values);
     return addItem(item) // calls the API method to add the item
       .then((newItem) => {
         // updates state with the new item
+        console.log("New Item Added:", newItem);
         setClothingItems((clothingItems) => [newItem, ...clothingItems]);
         closeModal();
       })
@@ -61,6 +61,7 @@ function App() {
         setClothingItems((clothingItems) =>
           clothingItems.filter((item) => item._id !== id)
         );
+        closeModal();
       })
       .catch(console.error);
   };

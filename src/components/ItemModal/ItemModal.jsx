@@ -20,32 +20,41 @@ function ItemModal({ isOpen, onClose, card, onClick }) {
 
   return (
     <>
-      <div className={`modal ${isOpen ? "modal_opened" : ""}`}>
-        <div className="modal__container modal__container_type_image">
-          <button
-            onClick={onClose}
-            type="button"
-            className="modal__close modal__close-preview"
-            aria-label="Close button"
-          ></button>
-          <img src={card.imageUrl} alt={card.name} className="modal__image" />
-          <div className="modal__details">
-            <h3 className="modal__caption">{card.name}</h3>
-            <p className="modal__weather">Weather: {card.weather}</p>
+      {!isConfirmationOpen && (
+        <div className={`modal ${isOpen ? "modal_opened" : ""}`}>
+          <div className="modal__container modal__container_type_image">
             <button
-              onClick={handleDeleteClick}
+              onClick={onClose}
               type="button"
-              className="modal__delete-btn"
-              aria-label="Delete button"
-            >
-              Delete item
-            </button>
+              className="modal__close modal__close-preview"
+              aria-label="Close button"
+            ></button>
+            <img src={card.imageUrl} alt={card.name} className="modal__image" />
+            <div className="modal__details">
+              <h3 className="modal__caption">{card.name}</h3>
+              <p className="modal__weather">Weather: {card.weather}</p>
+              <button
+                onClick={handleDeleteClick}
+                type="button"
+                className="modal__delete-btn"
+                aria-label="Delete button"
+              >
+                Delete item
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      )}
+
       {isConfirmationOpen && (
         <div className="modal modal_opened">
           <div className="modal__container modal__container_confirmation">
+            <button
+              onClick={handleCancelDelete}
+              type="button"
+              className="modal__close modal__close-confirmation"
+              aria-label="Close button"
+            ></button>
             <p className="modal__confirm-heading">
               Are you sure you want to delete this item? This action is
               irreversible.
