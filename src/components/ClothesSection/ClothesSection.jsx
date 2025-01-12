@@ -5,19 +5,7 @@ import "./ClothesSection.css";
 // import { defaultClothingItems } from "../../utils/constants";
 import ItemCard from "../ItemCard/ItemCard";
 
-function ClothesSection({ addButtonClick, handleCardClick }) {
-  const [clothingItems, setClothingItems] = useState([]);
-
-  useEffect(() => {
-    getItems()
-      .then((data) => {
-        setClothingItems(data);
-      })
-      .catch((err) => {
-        console.error("Error fetching clothing items:", err);
-      });
-  }, []);
-
+function ClothesSection({ addButtonClick, handleCardClick, clothingItems }) {
   return (
     <div className="clothes">
       <div className="clothes__section">
