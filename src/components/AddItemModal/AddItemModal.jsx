@@ -79,9 +79,9 @@ function AddItemModal({ isOpen, onAddItem, onClose }) {
             type="radio"
             className="modal__radio-input"
             id="hot"
-            value="Hot"
+            value="hot"
             name="options"
-            checked={weather === "Hot"} // bind to weather state to reset radio button
+            checked={weather === "hot"} // bind to weather state to reset radio button
             onChange={handleWeatherChange}
           />
           <label htmlFor="hot" className="modal__label modal__label_type_radio">
@@ -93,9 +93,9 @@ function AddItemModal({ isOpen, onAddItem, onClose }) {
             type="radio"
             className="modal__radio-input"
             id="warm"
-            value="Warm"
+            value="warm"
             name="options"
-            checked={weather === "Warm"}
+            checked={weather === "warm"}
             onChange={handleWeatherChange}
           />
           <label
@@ -110,9 +110,9 @@ function AddItemModal({ isOpen, onAddItem, onClose }) {
             type="radio"
             className="modal__radio-input"
             id="cold"
-            value="Cold"
+            value="cold"
             name="options"
-            checked={weather === "Cold"}
+            checked={weather === "cold"}
             onChange={handleWeatherChange}
           />
           <label

@@ -97,16 +97,28 @@
       "_id": 21
     },
     {
-      "name": "Winter Bootss",
-      "imageUrl": "https://media.kohlsimg.com/is/image/kohls/7356499_Chestnut",
-      "weather": "Cold",
-      "_id": 25
+      "name": "Socks",
+      "imageUrl": "https://media.kohlsimg.com/is/image/kohls/2678612_Black_Fairisle",
+      "weather": "cold",
+      "_id": 29
+    },
+    {
+      "name": "Gloves",
+      "imageUrl": "https://media.kohlsimg.com/is/image/kohls/6969962_Black",
+      "weather": "cold",
+      "_id": 30
     },
     {
       "name": "Winter Boots",
       "imageUrl": "https://media.kohlsimg.com/is/image/kohls/7356499_Chestnut",
-      "weather": "Cold",
-      "_id": 26
+      "weather": "cold",
+      "_id": 31
+    },
+    {
+      "name": "Turtleneck",
+      "imageUrl": "https://media.kohlsimg.com/is/image/kohls/5247879_Black",
+      "weather": "cold",
+      "_id": 32
     }
   ]
 }
