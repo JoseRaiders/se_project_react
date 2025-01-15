@@ -119,6 +119,12 @@
       "imageUrl": "https://media.kohlsimg.com/is/image/kohls/5247879_Black",
       "weather": "cold",
       "_id": 32
+    },
+    {
+      "name": "Cap",
+      "imageUrl": "https://media.kohlsimg.com/is/image/kohls/6137346_Midnight_Navy",
+      "weather": "warm",
+      "_id": 33
     }
   ]
 }
